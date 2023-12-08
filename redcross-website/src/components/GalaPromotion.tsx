@@ -2,6 +2,7 @@ import React from "react";
 import galaPhoto from "../assets/pexels-nappy-2994574.jpg";
 import "../css/GalaPromotion.css";
 import GalaPromotionBenefits from "./GalaPromotionBenefits";
+import Person from "../images/Person.png";
 // Replace with your actual image URL
 
 const GalaPromotion = () => {
@@ -33,6 +34,10 @@ const GalaPromotion = () => {
             attendees feeling moved and motivated to support the Red Cross's
             mission.
           </p>
+          <img src={Person} className="m-4" />
+          <h1>
+            "No act of kindness, no matter how small, is ever wasted." - Aesop
+          </h1>
         </div>
       </div>
       <>
