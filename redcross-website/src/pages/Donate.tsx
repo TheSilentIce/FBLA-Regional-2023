@@ -2,6 +2,7 @@ import { Button, FormGroup, Input, Label } from "reactstrap";
 import "../styles/Donate.css";
 import React from "react";
 import { useState } from "react";
+import RadioInput from "../components/RadioInput";
 
 function Donate() {
   const [amount, setAmount] = useState<number>(0.0);
@@ -84,20 +85,7 @@ function Donate() {
             <div className="donation-type">
               <div className="donation-type-header">Donation Type</div>
               <div className="donation-type-options">
-                <FormGroup check>
-                  <Input type="radio" name="1" />
-                  <Label check>One Time</Label>
-                </FormGroup>
-
-                <FormGroup check>
-                  <Input type="radio" name="2" />
-                  <Label check>Monthly</Label>
-                </FormGroup>
-
-                <FormGroup check>
-                  <Input type="radio" name="3" />
-                  <Label check>Annually</Label>
-                </FormGroup>
+                <RadioInput name="Donation Type" id="donationType" options={["One Time", "Monthly", "Annually"]}/>
               </div>
             </div>
             <Button color="primary" size="lg">
