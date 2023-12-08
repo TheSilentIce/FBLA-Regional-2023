@@ -56,7 +56,7 @@ export function Donate() {
                   name="Donation Amount: "
                   id="donation-text"
                   autocomplete="text"
-                  value={amount}
+                  value={new String ("$" + amount)}
                 />
               </div>
             </div>
