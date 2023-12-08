@@ -1,12 +1,26 @@
 import RadioInput from "../components/RadioInput";
 import ShortInput from "../components/ShortInput";
-import { useState } from "react";
-import donation_page_image from '../images/donate_page.jpg';
+import { useEffect, useState } from "react";
+import donation_page_image from "../images/donate_page.jpg";
+
+// const [users, setUsers] = useState<number>(
+//   parseInt(localStorage.getItem("users") || "0", 10)
+// );
+
+// useEffect(() => {
+//   localStorage.setItem("users", users.toString());
+// }, [users]);
 
 export function Donate() {
   const [amount, setAmount] = useState<number>(0.0);
-  const [total, setTotal] = useState<number>(0);
-  
+  const [total, setTotal] = useState<number>(
+    parseInt(localStorage.getItem("totalRaised") || "0", 0)
+  );
+
+  useEffect(() => {
+    localStorage.setItem("totalRaised", total.toString());
+  }, [total]);
+
   const FUNDRAISER_GOAL = 500;
 
   const amountClick = (value: number) => {
@@ -17,8 +31,6 @@ export function Donate() {
     setTotal(total + amount);
     setAmount(0);
   };
-
-
 
   return (
     <>
@@ -143,7 +155,10 @@ export function Donate() {
               </div>
               <div className="row pb-3 pt-5">
                 <div className="col">
-                  <div className="btn btn-primary w-100" onClick={() => reset()}>
+                  <div
+                    className="btn btn-primary w-100"
+                    onClick={() => reset()}
+                  >
                     Submit
                   </div>
                 </div>
@@ -151,7 +166,7 @@ export function Donate() {
             </form>
           </div>
           <div className="col-5">
-            <img src={donation_page_image} className="img-fluid pb-3"/>
+            <img src={donation_page_image} className="img-fluid pb-3" />
 
             <div
               className="progress"
@@ -160,9 +175,16 @@ export function Donate() {
               aria-valuemin={0}
               aria-valuemax={FUNDRAISER_GOAL}
             >
-              <div className="progress-bar" style={{ width: (total * 100 / FUNDRAISER_GOAL + "%") }}>{total * 100 / FUNDRAISER_GOAL}% </div>
+              <div
+                className="progress-bar"
+                style={{ width: (total * 100) / FUNDRAISER_GOAL + "%" }}
+              >
+                {(total * 100) / FUNDRAISER_GOAL}%{" "}
+              </div>
             </div>
-            <h5 className="pt-2 text-center">${total} of ${FUNDRAISER_GOAL} goal reached</h5>
+            <h5 className="pt-2 text-center">
+              ${total} of ${FUNDRAISER_GOAL} goal reached
+            </h5>
           </div>
         </div>
       </div>
