@@ -2,7 +2,6 @@ import { Button } from "reactstrap";
 import ShortInput from "../components/ShortInput";
 import SubmitButton from "../components/SubmitButton";
 import { useState } from "react";
-import GroupedButtons from "../components/GroupedButtons";
 
 export function Donate() {
   const [amount, setAmount] = useState<number>(0.0);
@@ -67,8 +66,7 @@ export function Donate() {
               <div className="col">
                 <div className="donation-box">
                   <div className="left-donation">
-                    <ShortInput name="Donation Amount: " id="donation-text" autocomplete="$0.00" value={amount}/>
-                    <GroupedButtons options={["$10", "$25", "$50", "$100"]}/>
+                    <ShortInput name="Donation Amount: " id="donation-text" value={amount} autocomplete="text"/>
                     <Button
                       style={buttonLeft}
                       color="success"
