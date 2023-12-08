@@ -54,9 +54,9 @@ const GalaPromotion = () => {
                     and manpower to respond effectively to disasters."/>
                 </li>
                 </ul>
-                <a className="nav-link sign-up-button" href="/register">
+                <button className="nav-button sign-up-button" href="/register">
                 Join the Cause: Sign Up Today!
-                </a>
+                </button>
             </>
         </>
       );

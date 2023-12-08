@@ -3,8 +3,6 @@ import InfoCarousel from "../components/InfoCarousel"
 import GalaPromotion from "../components/GalaPromotion"
 import RedCrossBanner from "../components/RedCrossBanner"
 export function Home() {
-	const [count, setCount] = useState(0)
-  
 	return (
 	  <>
 	  	<RedCrossBanner></RedCrossBanner>
