@@ -1,3 +1,4 @@
+import RadioInput from "../components/RadioInput";
 import ShortInput from "../components/ShortInput";
 import SubmitButton from "../components/SubmitButton";
 import { useState } from "react";
@@ -17,7 +18,7 @@ export function Donate() {
           <h1 className="d-flex justify-content-center">Donate</h1>
         </div>
         <div className="py-3"></div>
-        <div className="container text-center">
+        <div className="container">
           <form className="w-50">
             <div className="row">
               <div className="col">
@@ -59,7 +60,7 @@ export function Donate() {
                 />
               </div>
             </div>
-            <div className="row">
+            <div className="row pt-2">
               <div className="col">
                 <div
                   className="btn-group w-100"
@@ -122,6 +123,11 @@ export function Donate() {
                   </label>
                 </div>
               </div>
+            </div>
+            <div className="row">
+                <div className="col">
+                    <RadioInput name="Donation Type" id="donationType" options={["One Time", "Monthly", "Annually"]} />
+                </div>
             </div>
             <div className="row pb-3 pt-5">
               <div className="col">
