@@ -1,11 +1,11 @@
-import { Button, FormGroup, Input, Label } from "reactstrap";
+import { Button, FormGroup, Input, Label, Progress } from "reactstrap";
 import "../styles/Donate.css";
 import React from "react";
 import { useState } from "react";
-import RadioInput from "../components/RadioInput";
 
 function Donate() {
-  const [amount, setAmount] = useState<number>(0.0);
+  const [amount, setAmount] = useState<number>(0);
+  const [total, setTotal] = useState<number>(0);
 
   const firstItem = {
     display: "flex",
@@ -29,6 +29,12 @@ function Donate() {
 
   const amountClick = (value: number) => {
     setAmount(value);
+  };
+
+  //COPY THIS
+  const reset = () => {
+    setTotal(total + amount);
+    setAmount(0);
   };
 
   return (
@@ -85,16 +91,37 @@ function Donate() {
             <div className="donation-type">
               <div className="donation-type-header">Donation Type</div>
               <div className="donation-type-options">
-                <RadioInput name="Donation Type" id="donationType" options={["One Time", "Monthly", "Annually"]}/>
+                <FormGroup check>
+                  <Input type="radio" name="1" />
+                  <Label check>One Time</Label>
+                </FormGroup>
+
+                <FormGroup check>
+                  <Input type="radio" name="2" />
+                  <Label check>Monthly</Label>
+                </FormGroup>
+
+                <FormGroup check>
+                  <Input type="radio" name="3" />
+                  <Label check>Annually</Label>
+                </FormGroup>
               </div>
             </div>
-            <Button color="primary" size="lg">
+            <Button color="primary" size="lg" onClick={reset}>
               DONATE
             </Button>
           </div>
         </div>
 
-        <div className="right-body">s</div>
+        {/* THIS PART TOO */}
+
+        <div className="right-body">
+          <div className="redcross-image">a</div>
+          <div className="spacer">s</div>
+          <div className="progress1-bar">
+            <Progress value={total} max={200} />
+          </div>
+        </div>
       </div>
     </>
   );
