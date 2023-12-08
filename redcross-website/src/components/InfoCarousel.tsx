@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import InformationSlide from "./InformationSlide";
-
+import ClaraBarton from "../assets/Clara-Barton-photograph-Mathew-B-Brady-1866.jpeg";
+import RedCrossWork from "../assets/red-cross-work.jpeg";
+import RedCrossWhatWeAre from "../assets/what-we-are.jpeg";
 const texts = [
-    {title: "History", information: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", image: ""},
-    {title: "Our Work", information: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A erat nam at lectus urna duis convallis convallis. Nunc sed velit dignissim sodales ut eu. Auctor augue mauris augue neque gravida in fermentum et. Nibh praesent tristique magna sit amet. Arcu dui vivamus arcu felis. Amet nulla facilisi morbi tempus iaculis. Venenatis a condimentum vitae sapien pellentesque. Purus semper eget duis at tellus. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Ut venenatis tellus in metus vulputate. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Tellus integer feugiat scelerisque varius morbi. Elementum eu facilisis sed odio. Nulla pellentesque dignissim enim sit amet venenatis urna cursus. Augue mauris augue neque gravida in fermentum. Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt. Felis imperdiet proin fermentum leo. Aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod. Ornare arcu odio ut sem nulla pharetra diam sit amet. Ac turpis egestas integer eget. Consequat semper viverra nam libero justo laoreet sit. Ut morbi tincidunt augue interdum velit. Orci phasellus egestas tellus rutrum. Et ultrices neque ornare aenean euismod elementum nisi. Lectus sit amet est placerat. Urna duis convallis convallis tellus id interdum velit laoreet id. Natoque penatibus et magnis dis parturient montes. Viverra mauris in aliquam sem fringilla ut morbi tincidunt."}
+    {title: "History", information: "Clara Barton, a Civil War nurse, witnessed the suffering of soldiers firsthand. Inspired by the Red Cross in Europe, she returned home determined to bring its mission to America. Despite facing skepticism, she tirelessly campaigned and finally founded the American Red Cross in 1881. Under her leadership, the Red Cross expanded its reach beyond war relief, providing aid during natural disasters and advocating for public health initiatives. Today, Clara Barton's legacy lives on through the Red Cross, a global symbol of hope and compassion that continues to help those in need.", image: ClaraBarton},
+    {title: "What We Are About", information: "From disaster relief to blood donation, the Red Cross provides a global safety net for humanity. They offer immediate support in crises, like in Nepal's earthquake, and long-term aid in war-torn regions. Beyond emergencies, they empower individuals through first aid and CPR training, reuniting families separated by conflict, and advocating for peace and understanding. The Red Cross's enduring legacy is one of hope and resilience, built upon the unwavering compassion of countless volunteers and supporters.", image: RedCrossWhatWeAre},
+    {title: "Our Work", information: "The Red Cross stands as a pillar of support in times of need. From disaster relief and blood services to community programs and international aid, their reach extends far and wide. They provide essential resources and support, empowering individuals and communities to face challenges and build a brighter future. With unwavering dedication and compassion, the Red Cross makes a tangible difference in the lives of millions across the globe.", image: RedCrossWork},
   ];
 
 const InfoCarousel = ({ interval }) => {
@@ -12,7 +15,7 @@ const InfoCarousel = ({ interval }) => {
   const [information, setInformation] = useState([]);
 
   useEffect(() => {
-    let placeholder = texts.map((data) => <InformationSlide title={data.title} information={data.information}/>);
+    let placeholder = texts.map((data) => <InformationSlide title={data.title} information={data.information} img={data.image}/>);
     setInformation(placeholder);
   }, [])
 

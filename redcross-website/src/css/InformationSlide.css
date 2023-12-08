@@ -1,0 +1,7 @@
+.information-slide-image{
+    max-height: 60vh;
+}
+
+.information-slide-container {
+    display: flex;
+}

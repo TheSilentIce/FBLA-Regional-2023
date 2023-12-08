@@ -1,13 +1,19 @@
-function InformationSlide( {title, information} ) {
+import "../css/InformationSlide.css";
+
+function InformationSlide( {title, information, img} ) {
     return (
         <>
 
-                <h3>
-                    { title }
-                </h3>
-                <p>
+            <h3>
+                { title }
+            </h3>
+            <div className="information-slide-container">
+                <div>
                     {information}
-                </p>
+                </div>
+                <img src={img} className="information-slide-image"></img>
+            </div>
+
         </>
     )
 }
