@@ -1,0 +1,23 @@
+.red-cross-column {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+    height: 35vh;
+  }
+  
+  .red-cross-column h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #d31923;
+  }
+  
+  .red-cross-column p {
+    margin: 8px 0 0;
+    font-size: 16px;
+    color: #444;
+  }
