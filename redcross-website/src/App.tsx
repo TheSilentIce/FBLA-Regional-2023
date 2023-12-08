@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Register } from "./pages/Register";
 import Navbar from "./components/Navbar";
-import Donate from "./pages/Donate";
+import { Donate } from "./pages/Donate";
 
 function App() {
   return (
