@@ -11,7 +11,7 @@ const RedCrossBanner = () => {
         className="full-page-image"
       />
       <div className="motto-container">
-        <h1>Where Humanity Comes Together</h1>
+        <h1>Inter Arma Caritas</h1>
         <p>
           The Red Cross motto reflects our core belief in the power of human
           compassion and solidarity. We are dedicated to alleviating suffering,

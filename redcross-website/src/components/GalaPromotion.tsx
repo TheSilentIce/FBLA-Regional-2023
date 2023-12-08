@@ -41,7 +41,7 @@ const GalaPromotion = () => {
         </div>
       </div>
       <>
-        <h3>How Your Support Makes a Difference</h3>
+        <h3 className="info-carousel-title">How Your Support Makes a Difference</h3>
         <ul className="gala-promotion-benefit-container">
           <li>
             <GalaPromotionBenefits

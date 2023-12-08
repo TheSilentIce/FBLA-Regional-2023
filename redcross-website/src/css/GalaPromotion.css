@@ -1,10 +1,13 @@
 .gala-banner {
     background-image: url('../assets/red-cross-bg.jpg');
-    color: #333333; /* Replace with chosen dark text color */
-    padding: 20px;
+    color: white; /* Replace with chosen dark text color */
+    padding: 5%;
     display: flex;
+    background-color: red;
+    background-image: linear-gradient(to right, white , red);
   }
-  
+
+
   .gala-image {
     width: 30vw; /* Adjust width as needed */
     border-radius: 5px;
@@ -13,7 +16,6 @@
   
   .gala-content {
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.5); /* Add a slight white background for readability */
     border-radius: 5px;
   }
   
@@ -27,9 +29,16 @@ li {
 }
 
 .sign-up-button {
+    width: 10vw;
     padding-top: 10vh;
     padding-bottom: 15vh;
     right: 50vw;
     position: absolute;
     color: red;
+    border: red solid 1px;
+}
+
+.info-carousel-title{
+  color: black;
+  margin-left: 10%;
 }

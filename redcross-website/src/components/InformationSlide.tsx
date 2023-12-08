@@ -4,7 +4,7 @@ function InformationSlide( {title, information, img} ) {
     return (
         <>
 
-            <h3>
+            <h3 className="information-slide-title">
                 { title }
             </h3>
             <div className="information-slide-container">
