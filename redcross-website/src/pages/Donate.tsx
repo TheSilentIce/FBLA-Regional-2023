@@ -1,22 +1,9 @@
-import { Button } from "reactstrap";
 import ShortInput from "../components/ShortInput";
 import SubmitButton from "../components/SubmitButton";
 import { useState } from "react";
 
 export function Donate() {
   const [amount, setAmount] = useState<number>(0.0);
-
-  const buttonLeft = {
-    gridColumn: "1",
-    gridRow: "2",
-    border: "none",
-    marginRight: "3px",
-  };
-
-  const buttonRight = {
-    gridColumn: "2",
-    gridRow: "2",
-  };
 
   const amountClick = (value: number) => {
     setAmount(value);
@@ -62,43 +49,77 @@ export function Donate() {
                 />
               </div>
             </div>
-            <div className="row py-3">
+            <div className="row pt-3">
               <div className="col">
-                <div className="donation-box">
-                  <div className="left-donation">
-                    <ShortInput name="Donation Amount: " id="donation-text" value={amount} autocomplete="text"/>
-                    <Button
-                      style={buttonLeft}
-                      color="success"
-                      onClick={() => amountClick(10)}
-                    >
-                      $10
-                    </Button>
-                    <Button
-                      style={buttonRight}
-                      color="success"
-                      onClick={() => amountClick(25)}
-                    >
-                      $25
-                    </Button>
-                  </div>
+                <ShortInput
+                  name="Donation Amount: "
+                  id="donation-text"
+                  autocomplete="text"
+                  value={amount}
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">
+                <div
+                  className="btn-group w-100"
+                  role="group"
+                >
+                  <input
+                    type="radio"
+                    className="btn-check"
+                    name="donationAmount"
+                    id="donationAmount1"
+                  />
+                  <label
+                    className="btn btn-outline-primary"
+                    htmlFor="donationAmount1"
+                    onClick={() => amountClick(10)}
+                  >
+                    $10
+                  </label>
 
-                  <div className="right-donation">
-                    <Button
-                      style={buttonLeft}
-                      color="success"
-                      onClick={() => amountClick(50)}
-                    >
-                      $50
-                    </Button>
-                    <Button
-                      style={buttonRight}
-                      color="success"
-                      onClick={() => amountClick(100)}
-                    >
-                      $100
-                    </Button>
-                  </div>
+                  <input
+                    type="radio"
+                    className="btn-check"
+                    name="donationAmount"
+                    id="donationAmount2"
+                  />
+                  <label
+                    className="btn btn-outline-primary"
+                    htmlFor="donationAmount2"
+                    onClick={() => amountClick(25)}
+                  >
+                    $25
+                  </label>
+
+                  <input
+                    type="radio"
+                    className="btn-check"
+                    name="donationAmount"
+                    id="donationAmount3"
+                  />
+                  <label
+                    className="btn btn-outline-primary"
+                    htmlFor="donationAmount3"
+                    onClick={() => amountClick(50)}
+                  >
+                    $50
+                  </label>
+
+                  <input
+                    type="radio"
+                    className="btn-check"
+                    name="donationAmount"
+                    id="donationAmount4"
+                  />
+                  <label
+                    className="btn btn-outline-primary"
+                    htmlFor="donationAmount4"
+                    onClick={() => amountClick(100)}
+                  >
+                    $100
+                  </label>
                 </div>
               </div>
             </div>
