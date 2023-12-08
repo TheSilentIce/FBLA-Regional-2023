@@ -1,7 +1,7 @@
 import RadioInput from "../components/RadioInput";
 import ShortInput from "../components/ShortInput";
-import SubmitButton from "../components/SubmitButton";
 import { useState } from "react";
+import donation_page_image from '../images/donate_page.jpg';
 
 export function Donate() {
   const [amount, setAmount] = useState<number>(0.0);
@@ -28,9 +28,9 @@ export function Donate() {
           <h1 className="d-flex justify-content-center">Donate</h1>
         </div>
         <div className="py-3"></div>
-        <div className="row w-100">
-          <div className="col">
-            <form className="w-50">
+        <div className="row">
+          <div className="col-7">
+            <form>
               <div className="row">
                 <div className="col">
                   <ShortInput
@@ -150,8 +150,8 @@ export function Donate() {
               </div>
             </form>
           </div>
-          <div className="col w-50">
-            <img style={{ background: "red" }} />
+          <div className="col-5">
+            <img src={donation_page_image} className="img-fluid pb-3"/>
 
             <div
               className="progress"
