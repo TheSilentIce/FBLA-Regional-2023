@@ -10,5 +10,4 @@ const GalaPromotionBenefits = ({ title, text }) => {
   );
 };
 
-
 export default GalaPromotionBenefits;
