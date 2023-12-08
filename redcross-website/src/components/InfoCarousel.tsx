@@ -38,8 +38,8 @@ const InfoCarousel = ({ interval }) => {
     <div className="text-carousel">
       <div className="text-container">{information[activeIndex]}</div>
       <div className="navigation">
-        <button onClick={handlePrev}>Previous</button>
-        <button onClick={handleNext}>Next</button>
+        <button className="carousel-button btn btn-danger" onClick={handlePrev}>Previous</button>
+        <button className="carousel-button btn btn-danger" onClick={handleNext}>Next</button>
       </div>
       <style>{`
         .text-carousel {
@@ -50,13 +50,14 @@ const InfoCarousel = ({ interval }) => {
           width: 80vw;
           margin: 0 auto;
           font-size: 1.5rem;
+          margin-bottom: 5vh;
         }
         .text-container {
           padding: 1rem;
           border: 1px solid #ddd;
           border-radius: 5px;
           text-align: center;
-          animation: fadeInOut ${interval}ms ease-in-out;
+          animation: fadeInOut 1000ms ease-in-out;
         }
 
         .navigation {
@@ -69,6 +70,10 @@ const InfoCarousel = ({ interval }) => {
           border: 1px solid #ddd;
           border-radius: 3px;
           cursor: pointer;
+        }
+        .carousel-button {
+          background-color: red;
+          color: white;
         }
       `}</style>
     </div>

@@ -6,7 +6,7 @@ export function Home() {
 	return (
 	  <>
 	  	<RedCrossBanner></RedCrossBanner>
-		  <h2>
+		  <h2 className="info-carousel-title">
 			About Us
 		  </h2>
   <InfoCarousel interval={10000} />

@@ -4,8 +4,10 @@
     padding: 5%;
     display: flex;
     background-color: red;
+    background-image: linear-gradient(to right, white , red);
   }
-  
+
+
   .gala-image {
     width: 30vw; /* Adjust width as needed */
     border-radius: 5px;
@@ -34,4 +36,9 @@ li {
     position: absolute;
     color: red;
     border: red solid 1px;
+}
+
+.info-carousel-title{
+  color: black;
+  margin-left: 10%;
 }

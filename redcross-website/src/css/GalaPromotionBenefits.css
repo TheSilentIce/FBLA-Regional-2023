@@ -7,17 +7,18 @@
     flex-direction: column;
     width: 10vw;
     height: 35vh;
+    background: linear-gradient(to bottom, white 5% , red 50%);
   }
   
   .red-cross-column h3 {
     margin: 0;
     font-size: 18px;
     font-weight: bold;
-    color: #d31923;
+    color:  #ed1b2e;
   }
   
   .red-cross-column p {
     margin: 8px 0 0;
     font-size: 16px;
-    color: #444;
+    color: white;
   }
